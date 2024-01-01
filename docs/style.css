@@ -1,0 +1,89 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: linear-gradient(to top, #c3cdd7 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.who {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin: 1rem 0;
+}
+.who > div > h1 {
+    font-size: 1.5rem;
+}
+.who > div > span {
+    font-size: smaller;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0 1rem 0 -0.2rem;
+}
+
+.lang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 0.25rem;
+}
+
+.contact {
+    padding: 3rem 0;
+    margin: 3rem 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+.contact a {
+    font-size: 1.25rem;
+}
+
+.logo {
+    margin: 2rem;
+    float: right;
+    font-size: 2rem;
+}
+
+.links {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.links li {
+    margin: 0.25em 0;
+}
+
+hr {
+    margin: 2rem 0;
+}
