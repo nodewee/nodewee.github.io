@@ -1,0 +1,14 @@
+{
+  "user": {
+    "nickname": {
+      "en": "MixinCity",
+      "zh": "MixinCity"
+    },
+    "url": "https://gihutb.com/mixincity",
+    "avatar": "https://avatars.githubusercontent.com/u/114018518?v=4"
+  },
+  "analytics": {
+//   only for github pages
+    "google_tag_id": ""
+  }
+}

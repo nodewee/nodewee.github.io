@@ -1,0 +1,19 @@
+{
+  "lang": "en",
+  "favicon": "",
+  "image": null,
+  "author": "$common.user.nickname$",
+  "title": {
+    "en": "HenryZ",
+    "zh": "芦苇Z"
+  },
+  "description": {
+    "en": "HenryZ's personal page",
+    "zh": "芦苇Z的个人主页"
+  },
+  "keywords": {},
+  "date": {},
+  "page_url": "",
+  "page_type": "webpage",
+  "site_name": ""
+}

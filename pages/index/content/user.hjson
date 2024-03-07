@@ -1,0 +1,46 @@
+{
+  "nickname": {
+    "en": "HenryZ",
+    "zh": "芦苇Z"
+  },
+  "avatar": "https://avatars.githubusercontent.com/u/6458437?v=4",
+  "url": "https://nodewee.github.io/",
+  "domain": "nodewee.github.io",
+  "bio": {
+    "en": "Keep curiosity sharp",
+    "zh": "保持好奇心"
+  },
+  "contact": [
+    {
+      "name": "email",
+      "addr": "nodewee@gmail.com"
+    },
+    {
+      "name": "wechat",
+      "addr": "nodewee"
+    },
+    {
+      "name": "mixin",
+      "addr": "37297553"
+    },
+    {
+      "name": "nostr",
+      "addr": "npub1pxu784702nqh9sup7nlnn3xscjl87h4rg7ansnhs8c7pl7ha9xfqsk9xac",
+      "url": "https://www.nostrchat.io/dm/npub1pxu784702nqh9sup7nlnn3xscjl87h4rg7ansnhs8c7pl7ha9xfqsk9xac"
+    }
+  ],
+  "social": [
+    {
+      "name": "github",
+      "url": "https://github.com/nodewee/"
+    },
+    {
+      "name": "twitter-x",
+      "url": "https://twitter.com/hz42hz"
+    },
+    {
+      "name": "jike",
+      "url": "https://okjk.co/k253nP"
+    }
+  ]
+}

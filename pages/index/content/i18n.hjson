@@ -1,0 +1,10 @@
+{
+  "supported": [
+    "en",
+    "zh"
+  ],
+  "names": {
+    "en": "English",
+    "zh": "中文"
+  }
+}

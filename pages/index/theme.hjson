@@ -1,0 +1,145 @@
+{
+    // space theme - profile page
+  "app": "space-ui/v0/apps/basic-page",
+  "user": "$common.user$",
+  "i18n": {
+    "supported": "$content/i18n.supported$",
+    "component": {
+      "name": "csc-lang-switch/default/v1",
+      "props": {
+        "languages": "$content/i18n.names$"
+      }
+    }
+  },
+  "page": {
+    "style": {
+      "url": null,
+      "text": null,
+      "css_vars": {
+        "default": {},
+        "dark": {}
+      }
+    },
+    "meta": "$content/page-meta$",
+    "header_components": [
+      {
+        "name": "csc-header/default/v1",
+        "style": {
+          "url": null,
+          "css_vars": {
+            "default": {
+              "height": "20rem",
+              "bg-image": "$content/page-header.background_image$",
+              "bg-opacity": 0.65
+            },
+            "dark": {}
+          }
+        },
+        "props": {},
+        "components": [
+          {
+            "name": "csc-bg/animate-upward-square/v1",
+            "style": {
+              "css_vars": {
+                "default": {
+                  "bg-color": "transparent",
+                  "shape-color": "rgba(255, 255, 255, 0.1)"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "main_components": [
+      {
+        "name": "csc-bio-card/default/v1",
+        "style": {
+          "css_vars": {
+            "default": {
+              "margin-top": "-10rem"
+            },
+            "dark": {}
+          }
+        },
+        "props": {
+          "avatar": "$content/user.avatar$",
+          "domain": "$content/user.domain$",
+          "nickname": "$content/user.nickname$",
+          "bio": "$content/user.bio$"
+        }
+      },
+      {
+        "name": "h3",
+        "props": {
+          "text": {
+            "en": "Contact Me",
+            "zh": "联系我"
+          }
+        }
+      },
+      {
+        "name": "csc-contact-list/default/v1",
+        "style": {},
+        "props": {
+          "items": "$content/user.contact$"
+        }
+      },
+      {
+        "name": "h3",
+        "props": {
+          "text": {
+            "en": "My works",
+            "zh": "我的作品"
+          }
+        }
+      },
+      {
+        "name": "csc-link-card-list/default/v1",
+        "style": {},
+        "props": {
+          "items": "$content/works$"
+        }
+      },
+      {
+        "name": "h3",
+        "props": {
+          "text": {
+            "en": "Social Media",
+            "zh": "社交媒体"
+          }
+        }
+      },
+      {
+        "name": "csc-social-list/default/v1",
+        "style": {},
+        "props": {
+          "items": "$content/user.social$"
+        }
+      },
+      {
+        "name": "h3",
+        "props": {
+          "text": {
+            "en": "Friends",
+            "zh": "友情链接"
+          }
+        }
+      },
+      {
+        "name": "csc-link-card-list/one/v1",
+        "style": {},
+        "props": {
+          "items": "$content/friends$"
+        }
+      }
+    ],
+    "footer_components": [
+      {
+        "name": "csc-footer/simple/v1",
+        "style": {},
+        "props": "$content/page-footer$"
+      }
+    ]
+  }
+}
