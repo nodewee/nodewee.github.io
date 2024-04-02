@@ -1,5 +1,17 @@
 [
   {
+    "url": "https://filethings.net/",
+    "image": "https://logo.filethings.net/filethings-icon.webp",
+    "title": {
+      "en": "FileThings",
+      "zh": "FileThings"
+    },
+    "subtitle": {
+      "en": "File utility tools, resources and manuals",
+      "zh": "文件工具，资源和手册"
+    }
+  },
+    {
     "url": "https://github.com/nodewee/mixin-sdk-python",
     "image": "",
     "title": {
