@@ -1,0 +1,78 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "about": "About Me",
+      "contact": "Contact"
+    },
+    "portfolio": {
+      "title": "Projects",
+      "projects": [
+        {
+          "name": "Technical Manual",
+          "description": "Programming related technical notes",
+          "category": "programming",
+          "website": "https://manual.toulan.fun/"
+        },
+        {
+          "name": "2048 Game",
+          "description": "Number merging puzzle game",
+          "category": "game",
+          "website": "https://mixin.city/3ba1d10c451e4d81b6a16e62fe6facf5/"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "skills": [
+        "Thinking",
+        "Process Optimization",
+        "Software Development"
+      ]
+    },
+    "about": {
+      "title": "About Me",
+      "content": "I'm HenryZ. Keep curiosity sharp. Create something useful."
+    },
+    "footer": {
+      "contact": "Contact",
+      "friends": "Friends"
+    }
+  },
+  "zh": {
+    "portfolio": {
+      "title": "项目",
+      "projects": [
+        {
+          "name": "技术手册",
+          "description": "编程相关技术笔记",
+          "category": "programming",
+          "website": "https://manual.toulan.fun/"
+        },
+        {
+          "name": "2048游戏",
+          "description": "数字合并益智游戏",
+          "category": "game",
+          "website": "https://mixin.city/3ba1d10c451e4d81b6a16e62fe6facf5/"
+        }
+      ]
+    },
+    "skills": {
+      "title": "技能",
+      "skills": [
+        "思考",
+        "流程优化",
+        "软件开发"
+      ]
+    },
+    "about": {
+      "title": "关于我",
+      "content": "我是芦苇Z。保持好奇心。创造有用之物。"
+    },
+    "footer": {
+      "contact": "联系",
+      "friends": "朋友"
+    }
+  }
+}

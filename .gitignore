@@ -1,0 +1,15 @@
+# env
+**/.env.*
+**/.env
+
+# system
+.DS_Store
+*.log
+*.ini
+
+# IDE
+.vscode
+.cursor
+.cursorignore
+.cursorrules
+.cursorindexingignore
