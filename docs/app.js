@@ -498,8 +498,10 @@
     getProjectIcon(projectCategory) {
       const name = projectCategory ? projectCategory.toLowerCase() : '';
       
-      if (['programming','python'].includes(name)) {
+      if (['programming','python','js'].includes(name)) {
         return 'fas fa-code';
+      } else if (['writing'].includes(name)) {
+        return 'fas fa-pen';
       } else if (['game'].includes(name)) {
         return 'fas fa-gamepad';
       } else if (['tool'].includes(name)) {
@@ -526,6 +528,12 @@
       if (project.website) {
         links += `<a href="${project.website}" target="_blank" class="project-link website-link" aria-label="Project website">
           <i class="fas fa-external-link-alt"></i>
+        </a>`;
+      }
+
+      if (project.weixinhao) {
+        links += `<a href="${project.weixinhao}" target="_blank" class="project-link weixinhao-link" aria-label="WeChat official account">
+          <i class="fab fa-weixin"></i>
         </a>`;
       }
       
