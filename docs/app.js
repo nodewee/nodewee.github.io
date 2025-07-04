@@ -233,7 +233,6 @@
       this.initSmoothScrolling();
       this.initLazyLoading();
       this.initAnimations();
-      this.initScanlinesEffect();
       
       // Listen for i18n ready event BEFORE initializing i18n
       // This ensures the listener is attached before the event might be dispatched
@@ -281,7 +280,7 @@
       });
       
       // Throttled scroll handler for nav highlighting
-      window.addEventListener('scroll', this.throttle(this.highlightActiveNavItem, 100));
+      this.initNavObserver();
     },
     
     /**
@@ -310,30 +309,44 @@
     
     /**
      * Highlight the active navigation item based on scroll position
-     * Optimized with IntersectionObserver when supported
+     * Optimized with IntersectionObserver
      */
-    highlightActiveNavItem() {
-      const navLinks = document.querySelectorAll('nav a');
-      
-      // Older method as fallback (using scroll position)
+    initNavObserver() {
       if (!('IntersectionObserver' in window)) {
-        const scrollPosition = window.scrollY + 100; // Offset for fixed header
-        
-        document.querySelectorAll('section[id]').forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          const sectionId = section.getAttribute('id');
-          
-          if (
-            scrollPosition >= sectionTop && 
-            scrollPosition < sectionTop + sectionHeight
-          ) {
-            navLinks.forEach(link => {
-              link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
-            });
-          }
-        });
+          // Fallback for older browsers
+          window.addEventListener('scroll', this.throttle(() => {
+              const scrollPosition = window.scrollY + 100;
+              document.querySelectorAll('section[id]').forEach(section => {
+                  if (section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
+                      document.querySelectorAll('.nav-links a.active').forEach(a => a.classList.remove('active'));
+                      const navLink = document.querySelector(`.nav-links a[href="#${section.id}"]`);
+                      if (navLink) navLink.classList.add('active');
+                  }
+              });
+          }, 100));
+          return;
       }
+  
+      const sections = document.querySelectorAll('section[id]');
+      const headerHeight = document.querySelector('header')?.offsetHeight || 60;
+  
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              const id = entry.target.getAttribute('id');
+              const navLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+              if (navLink) {
+                  if (entry.isIntersecting) {
+                      document.querySelectorAll('.nav-links a.active').forEach(link => link.classList.remove('active'));
+                      navLink.classList.add('active');
+                  }
+              }
+          });
+      }, {
+          rootMargin: `-${headerHeight}px 0px -${window.innerHeight - headerHeight - 50}px 0px`,
+          threshold: 0
+      });
+  
+      sections.forEach(section => observer.observe(section));
     },
     
     /**
@@ -403,19 +416,6 @@
       animatedElements.forEach(element => {
         observer.observe(element);
       });
-    },
-    
-    /**
-     * Initialize scanlines effect with delay
-     */
-    initScanlinesEffect() {
-      // Delay scanline effect to improve initial page load
-      setTimeout(() => {
-        const scanline = document.querySelector('.scanline');
-        if (scanline) {
-          scanline.style.display = 'block';
-        }
-      }, 1000);
     },
     
     /**
