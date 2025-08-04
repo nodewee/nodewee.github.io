@@ -467,7 +467,7 @@
       const projectId = project.name.toLowerCase().replace(/\s+/g, '-');
       
       // Determine icon based on project category
-      const iconClass = this.getProjectIcon(project.category);
+      const iconClass = this.getProjectIcon(project.tags);
       
       const projectElement = document.createElement('div');
       projectElement.classList.add('project-card');
@@ -495,16 +495,25 @@
      * @param {string} projectCategory - Category of the project
      * @returns {string} - Icon class
      */
-    getProjectIcon(projectCategory) {
-      const name = projectCategory ? projectCategory.toLowerCase() : '';
-      
-      if (['programming','python','js'].includes(name)) {
-        return 'fas fa-code';
-      } else if (['writing'].includes(name)) {
+    getProjectIcon(projectTags) {
+      const tags = Array.isArray(projectTags) ? projectTags.map(t => t.toLowerCase()) : [];
+
+      if (tags.includes('cli-tool')) {
+        return 'fas fa-terminal';
+      }
+      if (tags.includes('writing')) {
         return 'fas fa-pen';
-      } else if (['game'].includes(name)) {
+      }
+      if (tags.includes('game')) {
         return 'fas fa-gamepad';
-      } else if (['tool'].includes(name)) {
+      }
+      if (tags.includes('web-app') && tags.includes('tool')) {
+        return 'fas fa-tools'; // For web tools
+      }
+      if (tags.includes('web-app')) { // For other web apps
+        return 'fas fa-rocket';
+      }
+      if (tags.includes('tool')) { // for generic tools not covered
         return 'fas fa-tools';
       }
       
